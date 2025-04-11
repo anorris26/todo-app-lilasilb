@@ -1,4 +1,5 @@
 # todo.py
+# Hi :)
 """
 A simple command-line To-Do List application that allows users to manage tasks.
 """
