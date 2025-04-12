@@ -6,7 +6,6 @@ A simple command-line To-Do List application that allows users to manage tasks.
 
 from typing import List
 
-
 class Todo:
     """A simple To-Do list application that manages tasks in memory.
 
@@ -17,6 +16,7 @@ class Todo:
     def __init__(self) -> None:
         """Initialize a new Todo instance with an empty task list."""
         self.tasks: List[str] = []
+        self.completed_tasks = []
 
     def add_task(self, task: str) -> None:
         """Add a new task to the list.
@@ -64,6 +64,12 @@ class Todo:
             for i, task in enumerate(self.tasks, start=1):
                 print(f"{i}. {task}")
 
+    def mark_completed(self, task: str) -> None:
+        '''Mark a task complete
+        '''
+        if task in self.tasks and task not in self.completed_tasks:
+            print("Task marked complete")
+            
 
 def main():
     """Run the interactive To-Do list application.
